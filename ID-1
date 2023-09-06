@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Landing Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: beige;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .navbar a {
+            text-transform: uppercase;
+            text-decoration: none;
+            color: black;
+            margin: 0 20px;
+        }
+
+        .banner {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .banner img {
+            width: 50%;
+            height: auto;
+            background-color: transparent;
+        }
+
+        .banner-text {
+            width: 50%;
+            padding-left: 20px;
+        }
+
+        .orange-text {
+            color: orange;
+            font-weight: bold;
+        }
+ .as-seen-in {
+        background-color: #fff;
+        text-align: center;
+        padding: 40px 0;
+    }
+
+    .as-seen-in-content {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .as-seen-in h2 {
+        font-size: 24px;
+        color: #333;
+    }
+
+    .logo-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .logo-container img {
+        width: 100px; /* Ajusta el tamaño según sea necesario */
+        margin: 0 20px;
+
+</style>
+</head>
+<body>
+    <div class="navbar">
+        <img src="tu-logo.png" alt="Logo">
+        <a href="#quien-soy">Quién Soy</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#testimonios">Testimonios</a>
+        <a href="#contacto">Contacto</a>
+    </div>
+
+    <div class="banner">
+        <img src="imagen-banner.jpg" alt="Banner Image">
+        <div class="banner-text">
+            <h1>Couching Financiera</h1>
+            <p>Te ayudo a transformar tus finanzas personales, a la vez que a cuestionar y <span class="orange-text">(liberarte de tus limitantes)</span> con respecto al dinero.</p>
+        </div>
+    </div>
+    <div class="as-seen-in">
+        <div class="as-seen-in-content">
+            <h2>TAL VEZ ME HAS VISTO EN:</h2>
+                <div class="logo-container">
+                <img src="elle-logo.png" alt="Elle">
+                <img src="hola-tv-logo.png" alt="Hola TV">
+                <img src="cosmopolitan-logo.png" alt="Cosmopolitan">
+                <img src="vogue-logo.png" alt="Vogue">
+        </div>
+    </div>
+</div>
+
+    <!-- Otras secciones de tu landing page aquí -->
+
+</body>
+</html>
