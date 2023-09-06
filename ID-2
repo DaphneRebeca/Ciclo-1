@@ -3,94 +3,517 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page de Ejemplo</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Tu Landing Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Estilos personalizados aquí */
+        /* Sección de navegación */
+        .navbar {
+            background-color: #fff;
+        }
+        .navbar-brand, .navbar-nav .nav-link {
+            color: beige;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        /* Banner principal */
+        .banner-section {
+            background-image: url('tu-imagen.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #333;
+            text-align: center;
+            padding: 100px 0;
+        }
+        .banner-content {
+            font-family: 'Futura';
+            font-size: 36px;
+        }
+        .banner-button {
+            background-color: orange;
+            color: white;
+            font-size: 18px;
+            padding: 15px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+        .banner-button:hover {
+            background-color: darkorange;
+        }
+        /* Sección de "Tal Vez Me Has Visto En" */
+        .as-seen-in {
+            background-color: #fff;
+            text-align: center;
+            padding: 40px 0;
+        }
+        .as-seen-in-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .as-seen-in h2 {
+            font-size: 24px;
+            color: #333;
+        }
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .logo-container img {
+            width: 100px;
+        }
+        /* Sección de descarga */
+        .download-section {
+            background-color: #f9f9f9;
+            text-align: center;
+            padding: 40px 0;
+        }
+        .download-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .download-section h2 {
+            font-family: Sansitas;
+            font-size: 24px;
+        }
+        .download-section p {
+            font-family: 'Futura Light';
+            font-size: 18px;
+            margin-top: 20px;
+        }
+        .download-button {
+            font-family: 'Futura Bold';
+            background-color: orange;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        .download-button:hover {
+            background-color: darkorange;
+        }
+        /* Sección "Acerca de Mí" */
+        .about-section {
+            text-align: center;
+            padding: 60px 0;
+        }
+        .about-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .about-image img {
+            max-width: 50%;
+        }
+        .about-text {
+            text-align: left;
+            padding-left: 20px;
+        }
+        .about-section h2 {
+            font-family: sans-serif;
+            font-size: 121px;
+            color: black;
+            margin: 0;
+        }
+        .about-section p {
+            font-family: 'Futura Light';
+            font-size: 18px;
+            margin-top: 20px;
+        }
+        .about-section h3 {
+            font-family: Sansitas;
+            color: green;
+            margin-top: 20px;
+        }
+        .social-icons {
+            margin-top: 20px;
+        }
+        .social-icons a {
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .social-icons img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+        /* Sección de testimonios */
+        .testimonial-section {
+            text-align: center;
+            padding: 60px 0;
+            background-color: #f0f0f0;
+        }
+        .testimonial-section h2 {
+            font-family: sans-serif;
+            font-size: 36px;
+            color: #333;
+            margin: 0;
+        }
+        .testimonial-container {
+            max-width: 800px;
+            margin: 20px auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+        .testimonial {
+            display: flex;
+            margin-bottom: 40px;
+            border-radius: 10px;
+            background-color: #4CAF50;
+            color: white;
+        }
+        .testimonial-image {
+            padding: 20px;
+        }
+        .testimonial-image img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+        }
+        .testimonial-text {
+            flex: 1;
+            padding: 20px;
+            text-align: left;
+        }
+        .testimonial-text p {
+            margin: 0;
+            font-size: 18px;
+        }
+        /* Sección de repetición */
+        .repeat-section {
+            background-color: beige;
+            text-align: center;
+            padding: 20px 0;
+        }
+        .repeat-section p {
+            font-family: sans-serif;
+            font-size: 24px;
+            color: #333;
+            margin: 0;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        .repeat-section p::before,
+        .repeat-section p::after {
+            content: "• DOMINA TUS FINANZAS Y LLEVA TU EMPRENDIMIENTO AL ÉXITO • ";
+        }
+        .repeat-section p::before {
+            float: left;
+            margin-right: 100%;
+        }
+        .repeat-section p::after {
+            float: right;
+            margin-left: 100%;
+        }
+        /* Sección "Emprende con Éxito" */
+        .guide-section {
+            background-color: beige;
+            text-align: center;
+            padding: 60px 0;
+        }
+        .guide-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .guide-image img {
+            max-width: 50%;
+        }
+        .guide-text {
+            text-align: left;
+            padding-left: 20px;
+        }
+        .guide-section h2 {
+            font-size: 24px;
+            margin: 0;
+        }
+        .guide-section h2 span {
+            font-family: Sansitas;
+        }
+        .guide-section h2 span:last-child {
+            color: orange;
+        }
+        .guide-section p {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+        .guide-section p span {
+            font-family: 'Futura';
+        }
+        .guide-section p span:last-child {
+            color: orange;
+        }
+        .orange-button {
+            background-color: orange;
+            color: white;
+            font-size: 18px;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        .orange-button:hover {
+            background-color: darkorange;
+        }
+        /* Sección de formulario emergente */
+        .modal-content {
+            background-color: green;
+            color: white;
+            font-family: 'Futura';
+        }
+        .modal-title {
+            font-size: 24px;
+            color: orange;
+        }
+        .modal-body p {
+            font-family: 'Futura Book';
+            color: black;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+        .form-group label {
+            color: white;
+        }
+        .form-control {
+            border: none;
+            border-bottom: 2px solid white;
+            border-radius: 0;
+            background-color: transparent;
+            color: white;
+        }
+        .form-control:focus {
+            box-shadow: none;
+        }
+        .invalid-feedback {
+            color: white;
+            font-size: 14px;
+        }
+        .modal-footer {
+            justify-content: center;
+            border-top: none;
+        }
+        /* Pie de página */
+        .footer-section {
+            background-color: beige;
+            padding: 40px 0;
+        }
+        .footer-link a {
+            text-decoration: none;
+            color: black;
+        }
+        .footer-link a:hover {
+            color: orange;
+        }
+        .footer-contact {
+            font-family: 'Futura Book';
+            font-size: 24px;
+            margin: 0;
+        }
+        .social-icons {
+            margin-top: 20px;
+        }
+        .social-icons a {
+            text-decoration: none;
+            margin-right: 15px;
+        }
+        .social-icons img {
+            width: 24px;
+            height: 24px;
+        }
+    </style>
 </head>
 <body>
 
-<!-- Barra de Navegación -->
-<nav class="navbar navbar-expand-lg navbar-light bg-beige">
-    <a class="navbar-brand" href="#">Logo</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="#quien-soy">Quién Soy</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#servicios">Servicios</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#testimonios">Testimonios</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#contacto">Contacto</a>
-            </li>
-        </ul>
+<!-- Barra de navegación -->
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">Inicio</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#quien-soy">Quién Soy</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#servicios">Servicios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#testimonios">Testimonios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contacto">Contacto</a>
+                </li>
+            </ul>
+        </div>
     </div>
 </nav>
 
-<!-- Banner -->
-<div class="container mt-5">
-    <div class="row">
-        <div class="col-lg-6">
-            <img src="banner-image.jpg" alt="Banner Image" class="img-fluid">
-        </div>
-        <div class="col-lg-6">
-            <h1>Couching Financiera</h1>
-            <p>Te ayudo a transformar tus finanzas personales, a la vez que a cuestionar y <span style="color: orange; font-weight: bold;">liberarte de tus limitantes</span> con respecto al dinero.</p>
+<!-- Banner principal -->
+<section class="banner-section">
+    <div class="container">
+        <div class="banner-content">
+            <h1>Coaching Financiero</h1>
+            <p>Te ayudo a transformar tus finanzas personales, a la vez que a cuestionar y <span style="color: orange;">liberarte de tus limitantes</span> con respecto al dinero.</p>
+            <a href="#descarga" class="banner-button">DESCARGAR GRATIS</a>
         </div>
     </div>
-</div>
+</section>
 
 <!-- Sección "Tal Vez Me Has Visto En" -->
-<div class="bg-light py-5 text-center">
+<section class="as-seen-in">
     <div class="container">
-        <h2>TAL VEZ ME HAS VISTO EN:</h2>
+        <div class="as-seen-in-content">
+            <h2>Tal Vez Me Has Visto En:</h2>
+            <div class="logo-container">
+                <img src="elle-logo.png" alt="Elle">
+                <img src="hola-tv-logo.png" alt="Hola TV">
+                <img src="cosmopolitan-logo.png" alt="Cosmopolitan">
+                <img src="vogue-logo.png" alt="Vogue">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sección de descarga -->
+<section id="descarga" class="download-section">
+    <div class="container">
+        <div class="download-content">
+            <h2>Descarga tu regalo de bienvenida GRATIS</h2>
+            <p>Incluye un ebook para empezar a controlar tus finanzas desde ya, y una plantilla excel que te hará este trabajo mucho más fácil.</p>
+            <a href="#descarga" class="download-button">DESCARGAR AHORA</a>
+        </div>
+    </div>
+</section>
+
+<!-- Sección "Acerca de Mí" -->
+<section id="quien-soy" class="about-section">
+    <div class="container">
+        <div class="about-content">
+            <div class="about-image">
+                <img src="tu-imagen.jpg" alt="Tu Foto">
+            </div>
+            <div class="about-text">
+                <h2>Caroline Sada</h2>
+                <p>Soy Licenciada en Administración y <span style="color: orange;">especialista en gestión financiera</span>. Juntos, navegaremos por las complejidades financieras para impulsar tu éxito empresarial.</p>
+                <h3>¡Únete a mi comunidad para potenciar tu emprendimiento!</h3>
+                <div class="social-icons">
+                    <a href="#" target="_blank"><img src="facebook-icon.png" alt="Facebook"></a>
+                    <a href="#" target="_blank"><img src="instagram-icon.png" alt="Instagram"></a>
+                    <a href="#" target="_blank"><img src="whatsapp-icon.png" alt="WhatsApp"></a>
+                    <a href="#" target="_blank"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sección de testimonios -->
+<section id="testimonios" class="testimonial-section">
+    <div class="container">
+        <h2>Testimonios</h2>
+        <div class="testimonial-container">
+            <!-- Testimonios aquí -->
+        </div>
+        <div class="testimonial-controls">
+            <div class="testimonial-dot"></div>
+            <div class="testimonial-dot"></div>
+            <div class="testimonial-dot"></div>
+        </div>
+    </div>
+</section>
+
+<!-- Sección de repetición -->
+<section class="repeat-section"></section>
+
+<!-- Sección "Emprende con Éxito" -->
+<section id="servicios" class="guide-section">
+    <div class="container">
+        <div class="guide-content">
+            <div class="guide-image">
+                <img src="nombre-de-imagen.svg" alt="Imagen SVG">
+            </div>
+            <div class="guide-text">
+                <h2><span style="color: black; font-family: Sansitas;">Emprende con Éxito</span> <span style="color: orange;">(Tu guía financiera)</span></h2>
+                <p><span style="color: black; font-family: 'Futura';">Te ayudaré a comprender y aplicar <span style="color: orange;">(estrategias efectivas de inversión)</span> para hacer crecer tus recursos financieros de manera segura y rentable.</span></p>
+                <a href="#definir-eso" class="orange-button">YO QUIERO EL CURSO</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sección de formulario emergente -->
+<div class="modal fade" id="popupForm" tabindex="-1" role="dialog" aria-labelledby="popupFormLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="popupFormLabel" style="font-family: 'Futura'; color: orange;">ÚNETE A LA COMUNIDAD</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p style="font-family: 'Futura Book'; color: black;">
+                    Suscríbete ahora para transformar tus finanzas y alcanzar el éxito.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <label for="email" style="color: white;">Correo Electrónico</label>
+                        <input type="email" class="form-control" id="email" placeholder="Ejemplo: correo@ejemplo.com" required>
+                        <div class="invalid-feedback">
+                            Por favor, introduce una dirección de correo válida.
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-warning">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Pie de página -->
+<footer class="footer-section">
+    <div class="container">
         <div class="row">
             <div class="col-md-3">
-                <img src="elle-logo.png" alt="Elle" class="img-fluid">
+                <img src="tu-logo.png" alt="Logo">
+                <p class="footer-link"><a href="#quien-soy">Conóceme</a></p>
             </div>
             <div class="col-md-3">
-                <img src="hola-tv-logo.png" alt="Hola TV" class="img-fluid">
+                <p class="footer-link"><a href="#servicios">Emprende con Éxito</a></p>
             </div>
             <div class="col-md-3">
-                <img src="cosmopolitan-logo.png" alt="Cosmopolitan" class="img-fluid">
+                <p class="footer-link"><a href="#testimonios">Cuéntame tu experiencia</a></p>
             </div>
             <div class="col-md-3">
-                <img src="vogue-logo.png" alt="Vogue" class="img-fluid">
+                <p class="footer-contact">0991199138</p>
+                <p class="footer-link">Visita mis redes</p>
+                <div class="social-icons">
+                    <a href="#" target="_blank"><img src="facebook-icon.png" alt="Facebook"></a>
+                    <a href="#" target="_blank"><img src="instagram-icon.png" alt="Instagram"></a>
+                    <a href="#" target="_blank"><img src="whatsapp-icon.png" alt="WhatsApp"></a>
+                    <a href="#" target="_blank"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+                </div>
             </div>
         </div>
     </div>
-</div>
+</footer>
 
-<!-- Sección de Descarga -->
-<div class="container mt-5">
-    <div class="row">
-        <div class="col-md-6">
-            <img src="svg-image.svg" alt="SVG Image" class="img-fluid">
-        </div>
-        <div class="col-md-6">
-            <h2 style="font-family: Sansitas; font-size: 121px; color: black;">Caroline Sada</h2>
-            <p style="font-family: 'Futura Light';">Soy Licenciada en Administración y <span style="color: orange;">especialista en gestión financiera</span>. Juntos, navegaremos por las complejidades financieras para impulsar tu éxito empresarial.</p>
-            <h3 style="font-family: Sansitas; color: green;">¡Únete a mi comunidad para potenciar tu emprendimiento!</h3>
-            <div class="social-icons">
-                <a href="#" target="_blank"><img src="facebook-icon.svg" alt="Facebook"></a>
-                <a href="#" target="_blank"><img src="instagram-icon.svg" alt="Instagram"></a>
-                <a href="#" target="_blank"><img src="whatsapp-icon.svg" alt="WhatsApp"></a>
-                <a href="#" target="_blank"><img src="linkedin-icon.svg" alt="LinkedIn"></a>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Scripts de Bootstrap -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- Biblioteca Bootstrap JavaScript -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </body>
 </html>
-
