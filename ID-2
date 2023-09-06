@@ -1,1 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page de Ejemplo</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<!-- Barra de Navegación -->
+<nav class="navbar navbar-expand-lg navbar-light bg-beige">
+    <a class="navbar-brand" href="#">Logo</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#quien-soy">Quién Soy</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#servicios">Servicios</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#testimonios">Testimonios</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#contacto">Contacto</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Banner -->
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-6">
+            <img src="banner-image.jpg" alt="Banner Image" class="img-fluid">
+        </div>
+        <div class="col-lg-6">
+            <h1>Couching Financiera</h1>
+            <p>Te ayudo a transformar tus finanzas personales, a la vez que a cuestionar y <span style="color: orange; font-weight: bold;">liberarte de tus limitantes</span> con respecto al dinero.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Sección "Tal Vez Me Has Visto En" -->
+<div class="bg-light py-5 text-center">
+    <div class="container">
+        <h2>TAL VEZ ME HAS VISTO EN:</h2>
+        <div class="row">
+            <div class="col-md-3">
+                <img src="elle-logo.png" alt="Elle" class="img-fluid">
+            </div>
+            <div class="col-md-3">
+                <img src="hola-tv-logo.png" alt="Hola TV" class="img-fluid">
+            </div>
+            <div class="col-md-3">
+                <img src="cosmopolitan-logo.png" alt="Cosmopolitan" class="img-fluid">
+            </div>
+            <div class="col-md-3">
+                <img src="vogue-logo.png" alt="Vogue" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Sección de Descarga -->
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6">
+            <img src="svg-image.svg" alt="SVG Image" class="img-fluid">
+        </div>
+        <div class="col-md-6">
+            <h2 style="font-family: Sansitas; font-size: 121px; color: black;">Caroline Sada</h2>
+            <p style="font-family: 'Futura Light';">Soy Licenciada en Administración y <span style="color: orange;">especialista en gestión financiera</span>. Juntos, navegaremos por las complejidades financieras para impulsar tu éxito empresarial.</p>
+            <h3 style="font-family: Sansitas; color: green;">¡Únete a mi comunidad para potenciar tu emprendimiento!</h3>
+            <div class="social-icons">
+                <a href="#" target="_blank"><img src="facebook-icon.svg" alt="Facebook"></a>
+                <a href="#" target="_blank"><img src="instagram-icon.svg" alt="Instagram"></a>
+                <a href="#" target="_blank"><img src="whatsapp-icon.svg" alt="WhatsApp"></a>
+                <a href="#" target="_blank"><img src="linkedin-icon.svg" alt="LinkedIn"></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Scripts de Bootstrap -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
 
